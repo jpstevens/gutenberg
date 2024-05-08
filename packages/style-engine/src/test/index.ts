@@ -5,7 +5,9 @@ import { getCSSRules, compileCSS } from '../index';
 
 describe( 'generate', () => {
 	it( 'should generate empty style', () => {
-		expect( compileCSS( {}, '.some-selector' ) ).toEqual( '' );
+		expect( compileCSS( {}, { selector: '.some-selector' } ) ).toEqual(
+			''
+		);
 	} );
 
 	it( 'should generate empty style with empty keys', () => {
